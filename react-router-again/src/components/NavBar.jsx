@@ -13,6 +13,7 @@ function NavBar() {
     <nav className='text-gray-500 flex justify-center gap-4 p-4 border-b border-gray-300 mb-4'>
       <NavLink style={activeStyle} to='/'>Home</NavLink>
       <NavLink style={activeStyle} to='/about'>About</NavLink>
+      <NavLink style={activeStyle} to='/products'>Products</NavLink>
     </nav>
   )
 }
