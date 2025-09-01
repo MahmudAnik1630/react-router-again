@@ -1,14 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function NavBar() {
+
+  const activeStyle = ({ isActive }) => ({
+    color:  isActive ? 'blue' : 'gray',
+    fontWeight: isActive ? 'bold' : 'normal',
+    textDecoration: isActive ? 'underline' : 'none'
+  });
+
   return (
     <nav className='text-gray-500 flex justify-center gap-4 p-4 border-b border-gray-300 mb-4'>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-
+      <NavLink style={activeStyle} to='/'>Home</NavLink>
+      <NavLink style={activeStyle} to='/about'>About</NavLink>
     </nav>
   )
 }
 
-export default NavBar
+export default NavBar;
