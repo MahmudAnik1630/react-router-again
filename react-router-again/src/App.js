@@ -7,6 +7,8 @@ import OrderSummary from "./components/OrderSummary";
 import Products from "./components/Products";
 import FeaturedProduct from "./components/FeaturedProduct";
 import NewProduct from "./components/NewProduct";
+import Users from "./components/Users";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   return (
@@ -21,7 +23,11 @@ function App() {
           <Route path="featured" element={<FeaturedProduct />} />
           <Route path="new" element={<NewProduct />} />
         </Route>
-
+         <Route path="/users" element={<Users/>}/> 
+          <Route path="/users/1" element={<UserDetails/>}/> 
+           <Route path="/users/2" element={<UserDetails/>}/> 
+            <Route path="/users/3" element={<UserDetails/>}/> 
+            <Route path="/users/4" element={<UserDetails/>}/> 
         <Route path="*" element={<h1>404 Not Found!</h1>} />
       </Routes>
     </>
